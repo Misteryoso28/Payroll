@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.sidebar {
+    width: 220px; /* Fixed width of sidebar */
+    background-color: #007bff;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s;
+    overflow: auto; /* Allow sidebar to scroll if content overflows */
+    z-index: 1000; /* Ensure sidebar is on top */
+}
+
+.sidebar.collapsed {
+    width: 60px; /* Adjust width when collapsed */
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.sidebar a:hover {
+    background-color: #0056b3;
+}
+
+.sidebar-toggle {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Adjust the content margin to account for sidebar width */
+.content {
+    margin-left: 260px; /* Increase margin to create space between sidebar and content */
+    padding: 20px;
+    transition: margin-left 0.3s;
+    min-height: 100vh; /* Ensure content area takes up at least the full height of the viewport */
+    box-sizing: border-box; /* Include padding in the element's width */
+    z-index: 1; /* Ensure content is above the background but below the sidebar */
+}
+
+.content.expanded {
+    margin-left: 80px; /* Adjust when sidebar is collapsed */
+}
+
+/* Login Container */
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Form Inputs and Buttons */
+input[type="text"], 
+input[type="password"], 
+input[type="number"], 
+input[type="date"], 
+input[type="email"], 
+select {
+    width: calc(100% - 20px); /* Ensure inputs and selects fit within the container */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded rectangle buttons */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Manage Employees Styles */
+.table-container {
+    margin: 20px 30px; /* Space around the table */
+}
+
+.table-container .button {
+    display: inline-block; /* Ensure the button doesn't stretch */
+    padding: 10px 20px; /* Add padding for better click area */
+    border-radius: 25px; /* Rounded corners */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-bottom: 20px; /* Margin below the button */
+}
+
+/* Button Styles */
+.button.edit {
+    background-color: #007bff; /* Blue color for edit */
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.button.edit:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.button.delete {
+    background-color: #dc3545; /* Red color for delete */
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.button.delete:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.button.add {
+    background-color: #28a745; /* Green color for add */
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+
+}
+
+.button.add:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Payroll Form Styles */
+.payroll-form {
+    border: 1px solid #ddd; /* Light grey border */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners for the form */
+    background-color: #ffffff; /* White background for contrast */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    margin-bottom: 20px; /* Space between form and table */
+}
+
+.payroll-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.payroll-form input[type="number"], 
+.payroll-form input[type="date"], 
+.payroll-form input[type="email"], 
+.payroll-form select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Payroll History Table Styles */
+table.payroll-history {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Space above the table */
+}
+
+table.payroll-history th {
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+table.payroll-history td {
+    padding: 10px;
+}
